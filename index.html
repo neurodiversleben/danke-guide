@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  DANKE-SEITE  ·  Taskparalyse-Guide  ·  neurodiversleben
+  ============================================================
+
+  WAS DU HIER ANPASST (dauert 2 Minuten):
+
+  1. ACCENT-FARBE: unten in :root --lime auf deine echte Limette setzen.
+  2. FONT: falls du eine Brand-Schrift hast, im <link>/CSS tauschen
+     (Kommentar "FONT-SWAP" weiter unten). Sonst laufen lassen, passt auch so.
+  3. KONTAKT-MAIL: das mailto: unten auf deine echte Support-Adresse setzen
+     (Suche nach "MAIL-SWAP").
+
+  SO GEHT SIE LIVE:
+
+  a) Diesen Ordner (danke-taskparalyse/) in dein GitHub-Pages-Repo legen.
+  b) Committen und pushen. Deine URL ist dann sowas wie:
+     https://neurodiversleben.github.io/DEIN-REPO/danke-taskparalyse/
+  c) Diese URL in CopeCart am Produkt ins Feld "Danke-Seite" eintragen.
+
+  Wiederverwendbar: Für die anderen Produkte nur die Zeile mit dem
+  Produktnamen tauschen (Suche nach "PRODUKT-SWAP") und in einen
+  neuen Ordner legen.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Passt. | neurodiversleben</title>
+
+<!-- FONT-SWAP: hier deine Brand-Schrift laden, falls vorhanden -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* ACCENT-SWAP: deine echte Limette hier rein */
+    --lime:   #b5d935;
+    --lime-soft: #eaf3c9;
+    --paper:  #f5f6f0;
+    --ink:    #22241e;
+    --muted:  #6a6f62;
+
+    /* FONT-SWAP: Familien hier tauschen */
+    --display: "Fraunces", Georgia, serif;
+    --body:    "Instrument Sans", system-ui, sans-serif;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ height:100%; }
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    min-height:100dvh;
+    padding:2rem 1.5rem 2.5rem;
+  }
+
+  .brand{
+    font-size:.82rem;
+    letter-spacing:.14em;
+    text-transform:lowercase;
+    color:var(--muted);
+    font-weight:500;
+  }
+
+  main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width:34rem;
+    width:100%;
+    margin:0 auto;
+    padding:2.5rem 0;
+  }
+
+  /* Signature: das grosse ruhige Wort. Kein Ausrufezeichen, kein Druck. */
+  .hero{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(4.5rem, 22vw, 8.5rem);
+    line-height:.9;
+    letter-spacing:-.02em;
+    position:relative;
+    width:max-content;
+    max-width:100%;
+  }
+  /* der Limette-Punkt sitzt bewusst separat, wie ein Haken */
+  .hero .dot{ color:var(--lime); }
+
+  .sub{
+    font-size:1.22rem;
+    margin-top:1.6rem;
+    max-width:26rem;
+  }
+  .sub strong{ font-weight:500; }
+
+  .card{
+    margin-top:2.4rem;
+    background:#fff;
+    border:1px solid #e7e9df;
+    border-radius:14px;
+    padding:1.4rem 1.5rem;
+    font-size:1rem;
+  }
+  .card p + p{ margin-top:.7rem; }
+  .card .lead{ font-weight:500; }
+  .card .quiet{ color:var(--muted); font-size:.94rem; }
+  .card a{
+    color:var(--ink);
+    text-decoration-color:var(--lime);
+    text-underline-offset:3px;
+    text-decoration-thickness:2px;
+  }
+  .card a:focus-visible{
+    outline:2px solid var(--lime);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* PDA-conform: die Zeile, die keinen Termin setzt. */
+  .permission{
+    display:flex;
+    align-items:flex-end;
+    gap:1.1rem;
+    margin-top:2.4rem;
+  }
+  .permission p{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--ink);
+    line-height:1.35;
+  }
+
+  /* MiauDHS macht solang ein Nickerchen. Absicht. */
+  .cat{ flex:none; width:74px; height:auto; }
+  .cat .body{ fill:var(--ink); }
+  .cat .z{ fill:var(--muted); }
+
+  footer{
+    max-width:34rem;
+    width:100%;
+    margin:0 auto;
+    padding-top:2rem;
+    border-top:1px solid #e2e4d9;
+  }
+  .claim{
+    font-family:var(--display);
+    font-size:1rem;
+    color:var(--ink);
+  }
+  .claim .b{ color:var(--muted); }
+
+  /* ruhiger Auftakt, kein Zappeln */
+  @media (prefers-reduced-motion: no-preference){
+    main > *{ opacity:0; transform:translateY(10px); animation:rise .7s ease forwards; }
+    .sub{ animation-delay:.12s; }
+    .card{ animation-delay:.24s; }
+    .permission{ animation-delay:.36s; }
+    @keyframes rise{ to{ opacity:1; transform:none; } }
+  }
+
+  @media (max-width:400px){
+    .permission{ flex-direction:column-reverse; align-items:flex-start; gap:1.2rem; }
+    .cat{ width:64px; }
+  }
+</style>
+</head>
+<body>
+
+  <span class="brand">neurodiversleben</span>
+
+  <main>
+    <!-- dry, österreichisch, kein Jubel -->
+    <h1 class="hero">Passt<span class="dot">.</span></h1>
+
+    <!-- PRODUKT-SWAP: nur diesen Produktnamen für andere Produkte tauschen -->
+    <p class="sub">Der <strong>Taskparalyse-Guide</strong> gehört dir. Das PDF ist gerade unterwegs in dein Postfach.</p>
+
+    <div class="card">
+      <p class="lead">Schau in die Mail, mit der du bezahlt hast.</p>
+      <p class="quiet">Falls nach zehn Minuten nichts da ist, wirf einen Blick in den Spam-Ordner. Wenn dann immer noch nichts auftaucht, <!-- MAIL-SWAP --><a href="mailto:hallo@neurodiversleben.de">schreib mir kurz</a> und ich schick dir die Datei direkt.</p>
+    </div>
+
+    <div class="permission">
+      <!-- schlafende Katze, minimal -->
+      <svg class="cat" viewBox="0 0 120 90" role="img" aria-label="MiauDHS schläft">
+        <path class="body" d="M30 74c-14 0-24-9-24-22 0-8 5-15 12-19-2-4-3-9-2-14 0-1 2-2 3-1l9 9c4-2 9-3 14-3s10 1 14 3l9-9c1-1 3 0 3 1 1 5 0 10-2 14 7 4 12 11 12 19 0 13-10 22-24 22z"/>
+        <circle class="body" cx="45" cy="55" r="1.6"/>
+        <circle class="body" cx="59" cy="55" r="1.6"/>
+        <text class="z" x="86" y="34" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="500">z</text>
+        <text class="z" x="94" y="24" font-family="Instrument Sans, sans-serif" font-size="15" font-weight="500">z</text>
+        <text class="z" x="104" y="13" font-family="Instrument Sans, sans-serif" font-size="18" font-weight="500">z</text>
+      </svg>
+      <p>Wann du reinschaust ist offen.<br>Der Guide wartet ohne zu drängeln.</p>
+    </div>
+  </main>
+
+</body>
+</html>
