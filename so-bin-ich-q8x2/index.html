@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Passt. | So bin ich | neurodiversleben</title>
+<style>
+  @font-face { font-family: "Bricolage Grotesque"; font-weight: 800; font-display: swap; src: url("../assets/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Instrument Sans"; font-weight: 400; font-display: swap; src: url("../assets/fonts/instrument-sans-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Instrument Sans"; font-weight: 500; font-display: swap; src: url("../assets/fonts/instrument-sans-latin-500-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Instrument Sans"; font-weight: 600; font-display: swap; src: url("../assets/fonts/instrument-sans-latin-600-normal.woff2") format("woff2"); }
+  :root { --lila: #5B16D6; --lime: #C4F000; --paper: #FAF9F5; --ink: #2B2B33; --muted: #6B6B73;
+          --display: "Bricolage Grotesque", system-ui, sans-serif; --body: "Instrument Sans", system-ui, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased;
+         display: flex; flex-direction: column; min-height: 100dvh; padding: 2rem 1.5rem 2.5rem; }
+  .brand { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 800; font-size: 1rem; color: var(--ink); text-decoration: none; }
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 34rem; width: 100%; margin: 0 auto; padding: 2.5rem 0; }
+  .hero { font-family: var(--display); font-weight: 800; font-size: clamp(4.5rem, 22vw, 8rem); line-height: .9; letter-spacing: -.04em; }
+  .hero .dot { color: var(--lime); }
+  .sub { font-size: 1.22rem; margin-top: 1.6rem; max-width: 28rem; }
+  .card { margin-top: 2.2rem; background: #fff; border-radius: 20px; padding: 1.6rem; box-shadow: 0 1px 0 #E3E2DC; }
+  .card p + p, .card .btn + p { margin-top: .8rem; }
+  .lead { font-weight: 600; }
+  .quiet { color: var(--muted); font-size: .95rem; }
+  .card a { color: var(--ink); text-decoration-color: var(--lime); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; margin-top: 1rem;
+         border-radius: 999px; background: var(--lila); color: #fff !important; font-weight: 600; text-decoration: none !important; }
+  .btn:hover { background: #4A10B3; }
+  a:focus-visible { outline: 3px solid var(--lila); outline-offset: 3px; border-radius: 6px; }
+  .permission { display: flex; align-items: flex-end; gap: 1.1rem; margin-top: 2.4rem; }
+  .permission p { font-style: italic; font-size: 1.12rem; line-height: 1.4; }
+  .cat { flex: none; width: 74px; height: auto; }
+  .cat .body { fill: var(--ink); }
+  .cat .z { fill: var(--muted); font-family: var(--body); }
+  @media (prefers-reduced-motion: no-preference) {
+    main > * { opacity: 0; transform: translateY(10px); animation: rise .7s ease forwards; }
+    .sub { animation-delay: .12s; } .card { animation-delay: .24s; } .permission { animation-delay: .36s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+  }
+  @media (max-width: 400px) { .permission { flex-direction: column-reverse; align-items: flex-start; gap: 1.2rem; } .cat { width: 64px; } }
+</style>
+</head>
+<body>
+  <a class="brand" href="https://neurodiversleben.github.io/"><svg width="18" height="20" viewBox="0 0 100 110" aria-hidden="true"><path d="M46 4A46 46 0 0 0 46 96Z" fill="#5B16D6"/><path d="M54 14A46 46 0 0 1 54 106Z" fill="#C4F000"/></svg>neurodiversleben</a>
+  <main>
+    <h1 class="hero">Passt<span class="dot">.</span></h1>
+    <p class="sub">Danke für deinen Kauf von <strong>So bin ich</strong>. Hier ist dein Kommunikations-Guide.</p>
+    <div class="card">
+      <p class="lead">Dein Kommunikations-Guide</p>
+      <a class="btn" href="DOWNLOAD-SO-BIN-ICH">Guide herunterladen</a>
+      <p class="quiet">Speicher dir diese Seite oder die Datei am besten gleich ab.</p>
+      <p class="quiet">Zusätzlich bekommst du eine Mail mit dem Download. Sie kommt von <strong>CopeCart</strong>, nicht von neurodiversleben, und landet manchmal im Spam. Falls etwas nicht klappt, <a href="mailto:sabrina.u.geissler@icloud.com">schreib mir kurz</a> und ich schick dir alles direkt.</p>
+    </div>
+    <div class="permission">
+      <svg class="cat" viewBox="0 0 120 90" role="img" aria-label="MiauDHS schläft">
+        <path class="body" d="M30 74c-14 0-24-9-24-22 0-8 5-15 12-19-2-4-3-9-2-14 0-1 2-2 3-1l9 9c4-2 9-3 14-3s10 1 14 3l9-9c1-1 3 0 3 1 1 5 0 10-2 14 7 4 12 11 12 19 0 13-10 22-24 22z"/>
+        <circle class="body" cx="45" cy="55" r="1.6"/>
+        <circle class="body" cx="59" cy="55" r="1.6"/>
+        <text class="z" x="86" y="34" font-size="12" font-weight="500">z</text>
+        <text class="z" x="94" y="24" font-size="15" font-weight="500">z</text>
+        <text class="z" x="104" y="13" font-size="18" font-weight="500">z</text>
+      </svg>
+      <p>Wann du reinschaust ist offen.<br>Es läuft dir nicht weg.</p>
+    </div>
+  </main>
+</body>
+</html>
